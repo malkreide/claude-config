@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: Use when creating new skills, editing existing skills, or verifying that a skill actually changes agent behaviour before deployment (baseline run without the skill, then with). Complements skill-creator, which scaffolds structure and frontmatter; this skill supplies the test.
 ---
 
 # Writing Skills
@@ -18,6 +18,17 @@ You write test cases (pressure scenarios with subagents), watch them fail (basel
 **REQUIRED BACKGROUND:** You MUST understand the RED-GREEN-REFACTOR cycle before using this skill — read [references/tdd-background.md](references/tdd-background.md) if it is not fresh in context. This skill adapts TDD to documentation.
 
 **Official guidance:** For Anthropic's official skill authoring best practices, see references/anthropic-best-practices.md. This document provides additional patterns and guidelines that complement the TDD-focused approach in this skill.
+
+## Relationship to skill-creator
+
+If a `skill-creator` skill is also available, the two divide the work:
+
+| Question | Skill |
+|---|---|
+| How should the skill be structured? Frontmatter, directory layout, description wording, bundled scripts | **skill-creator** (scaffold first) |
+| Does the skill change what the agent does? Baseline without it, pressure scenarios, rationalization table, re-test after edits | **writing-skills** (this skill) |
+
+Order for a new skill: skill-creator → draft → writing-skills (baseline, test, refactor). Order for an existing skill: writing-skills only, unless the structure itself is the problem. Never run both as if they were alternatives.
 
 ## What is a Skill?
 

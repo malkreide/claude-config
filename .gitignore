@@ -1,3 +1,17 @@
 Thumbs.db
 .DS_Store
 *.zip
+*.log
+/tmp/
+
+# Secrets – nie committen
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.yaml
+config.local.*
+
+__pycache__/
+*.py[cod]

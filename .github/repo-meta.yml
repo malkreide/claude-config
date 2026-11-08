@@ -1,0 +1,16 @@
+# .github/repo-meta.yml — von der github-repo Skill gepflegt
+repo_name: claude-config
+title: claude-config
+description: "Personal Claude config: global CLAUDE.md, vendored Superpowers skills and helper scripts"
+topics: [claude-code, claude-skills, dotfiles, superpowers, claude, anthropic, powershell, prompt-engineering]
+project_type: claude-skill
+visibility: public
+license: MIT
+author_legal_name: Hayal Özkan
+author_label: Autor
+github_user: malkreide
+default_branch: main
+language: powershell
+version: 1.0.0
+confirmed: true
+offen: []
