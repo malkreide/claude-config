@@ -16,6 +16,7 @@ Reihenfolge, wenn etwas als fertig gelten oder publiziert werden soll – jeder 
 3. `github-repo` – `validate_repo.py` ohne ERROR, Secrets-Check, README beider Sprachen, Release-Gate (Schritt 12).
 4. `superpowers:finishing-a-development-branch` – Merge- oder PR-Entscheid, Worktree aufräumen.
 Ein Gate überspringen heisst: nicht fertig. Das letzte Gate (github-repo) prüft, ob die vorherigen gelaufen sind.
+Der Versions-Bump (pyproject, server.json, Tool-Pin, CHANGELOG-Datum) gehört zu Schritt 3 und kommt nach Gate 1 und 2 – nicht als lokaler «Vorgriff», den man vor dem Push nachprüft.
 
 ## Skill-Vorrang in MCP-Repos
 Gilt in jedem Repo, dessen Name auf `-mcp` endet:
