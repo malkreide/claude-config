@@ -30,3 +30,11 @@ Gilt in Repos, deren Name auf `-pi` endet oder die Pi-Hardware ansprechen (GPIO,
 - `raspberry-pi-ai` ist der Bau-Skill (Bauplan, Komponenten, Setup, Edge-AI-Deployment) – an der Stelle, an der in MCP-Repos `mcp-builder` steht.
 - Hardware-Fehler (Sensor liefert nichts, I2C nicht gefunden, Kamera nicht erkannt): zuerst die Debug-Schritte aus `raspberry-pi-ai`, `superpowers:systematic-debugging` nur bei Fehlern im eigenen Python-Code.
 - Verifikation heisst: auf dem Gerät gelaufen, nicht nur lokal. Ohne Gerätezugriff gilt «ungetestet», nicht «fertig».
+
+
+## Python-Umgebung pro Repo
+Gilt in jedem Repo mit Python-Code. Es gibt kein globales ruff, und ins System-Python wird nichts installiert:
+- Gates, Lint und Tests laufen mit dem Python der Repo-Umgebung: `.venv/Scripts/python.exe scripts/check_ruff_pin.py`, `.venv/Scripts/python.exe -m ruff …`, `.venv/Scripts/python.exe -m pytest`.
+- Fehlt `.venv`: mit `uv venv .venv` und `uv pip install --python .venv -e ".[dev]"` anlegen. Eine vorhandene `.venv` nicht ersetzen, sondern mit dem zweiten Befehl nachziehen.
+- Meldet `check_ruff_pin.py` eine Abweichung: den zweiten Befehl wiederholen. Nie `pip install` ohne `--python .venv`, auch wenn eine Fehlermeldung es so vorschlägt.
+- Repos ohne `pyproject.toml` (Skill-Repos): ruff als `uvx ruff@<Pin>` aufrufen, mit dem Pin aus `requirements-lint.txt`.
