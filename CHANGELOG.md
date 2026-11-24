@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `CHANGELOG.md` and `.github/repo-meta.yml`
 - Secret patterns in `.gitignore`
 
+### Changed
+- `claude-code/CLAUDE-mcp-repo.md` is now the canonical source for «Teil 1 — Konventionen
+  (portfolio-weit)» (from `swiss-cultural-heritage-mcp` @ 44223412cbdd, ruff sentence adapted
+  to the repo `.venv`); the former «Skill-Vorrang» block is kept as a reserve
+- `scripts/add-skill-precedence.ps1` is locked (aborts) until it is rebuilt for the new file layout
+
 ## [1.0.0] - 2026-11-08
 
 ### Added

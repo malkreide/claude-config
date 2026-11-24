@@ -1,4 +1,8 @@
 # Hängt den Block «Skill-Vorrang» aus CLAUDE-mcp-repo.md an die CLAUDE.md aller passenden GitHub-Repos an.
+# GESPERRT: CLAUDE-mcp-repo.md ist jetzt die kanonische Quelle für «Teil 1 — Konventionen
+# (portfolio-weit)», mit «Skill-Vorrang» nur noch als Reserve. Die Logik unten (die ersten
+# 2 Zeilen überspringen, den Rest anhängen) würde Teil 1, die Reserve und Teile des Kopfkommentars
+# verteilen. Bis zum Umbau bricht das Skript ab.
 # Idempotent: Repos, deren CLAUDE.md den Marker schon enthält, werden übersprungen.
 #
 #   .\add-skill-precedence.ps1            Dry-Run: zeigt nur, was passieren würde
@@ -13,6 +17,7 @@ param(
   [string]$AuthorEmail = "8864492+malkreide@users.noreply.github.com",
   [switch]$Apply
 )
+throw "Gesperrt: CLAUDE-mcp-repo.md enthält jetzt Teil 1 und den Reserve-Block; dieses Skript würde den falschen Inhalt verteilen. Siehe Kopfkommentar."
 $ErrorActionPreference = "Continue"
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 

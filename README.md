@@ -17,10 +17,10 @@ Personal Claude configuration: a global `CLAUDE.md` for Claude Code, three skill
 | Path | Purpose |
 |---|---|
 | `claude-code/CLAUDE.md` | Global rules for Claude Code (`~/.claude/CLAUDE.md`): mandatory skills, taming Superpowers, skill precedence in MCP repos |
-| `claude-code/CLAUDE-mcp-repo.md` | Block for the `CLAUDE.md` of individual `*-mcp` repos (only needed when the global rule is not enough) |
+| `claude-code/CLAUDE-mcp-repo.md` | Canonical source for «Teil 1 — Konventionen (portfolio-weit)» of the repo `CLAUDE.md` in the MCP portfolio (taken from `swiss-cultural-heritage-mcp`; the target repo needs `docs/claude/wenn-etwas-rot-ist.md` and `docs/claude/parallele-agenten.md`), plus the former «Skill-Vorrang» block as a reserve, not part of the short form |
 | `skills/` | `verification-before-completion`, `systematic-debugging`, `writing-skills` – Superpowers 7.0.2, cross-references localised, TDD reference embedded; source for the skill upload to Claude |
 | `scripts/install-skills.ps1` | Copies or links (`-Link`) the skills into `~/.claude/skills` – only for devices without the Superpowers plugin |
-| `scripts/add-skill-precedence.ps1` | Appends the MCP repo block to the `CLAUDE.md` of all `*-mcp` repos (dry run without `-Apply`) |
+| `scripts/add-skill-precedence.ps1` | Appended the former «Skill-Vorrang» block to the `CLAUDE.md` of all `*-mcp` repos – currently locked (aborts), because `CLAUDE-mcp-repo.md` now holds Teil 1 |
 
 ## Setup on a device
 

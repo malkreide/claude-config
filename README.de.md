@@ -17,10 +17,10 @@ Persönliche Claude-Konfiguration: globale `CLAUDE.md` für Claude Code, drei au
 | Pfad | Zweck |
 |---|---|
 | `claude-code/CLAUDE.md` | Globale Regeln für Claude Code (`~/.claude/CLAUDE.md`): Pflicht-Skills, Superpowers zähmen, Skill-Vorrang in MCP-Repos |
-| `claude-code/CLAUDE-mcp-repo.md` | Block für die `CLAUDE.md` einzelner `*-mcp`-Repos (nur nötig, wenn die globale Regel nicht reicht) |
+| `claude-code/CLAUDE-mcp-repo.md` | Kanonische Quelle für «Teil 1 — Konventionen (portfolio-weit)» der Repo-`CLAUDE.md` im MCP-Portfolio (übernommen aus `swiss-cultural-heritage-mcp`; im Ziel-Repo müssen `docs/claude/wenn-etwas-rot-ist.md` und `docs/claude/parallele-agenten.md` liegen), dazu der bisherige Block «Skill-Vorrang» als Reserve, nicht Teil der Kurzform |
 | `skills/` | `verification-before-completion`, `systematic-debugging`, `writing-skills` – Superpowers 7.0.2, Querverweise lokalisiert, TDD-Referenz eingebettet; Quelle für den Skill-Upload in Claude |
 | `scripts/install-skills.ps1` | Kopiert oder verknüpft (`-Link`) die Skills nach `~/.claude/skills` – nur für Geräte ohne Superpowers-Plugin |
-| `scripts/add-skill-precedence.ps1` | Hängt den MCP-Repo-Block an die `CLAUDE.md` aller `*-mcp`-Repos an (Dry-Run ohne `-Apply`) |
+| `scripts/add-skill-precedence.ps1` | Hängte den bisherigen Block «Skill-Vorrang» an die `CLAUDE.md` aller `*-mcp`-Repos an – derzeit gesperrt (bricht ab), weil `CLAUDE-mcp-repo.md` jetzt Teil 1 enthält |
 
 ## Setup auf einem Gerät
 
